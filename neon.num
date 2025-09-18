@@ -1,0 +1,18 @@
+public class neon {
+    public static String checkNeonNumber(int n) { 
+        long square = (long)n * n;
+        int sum = 0;
+        while (square > 0) {
+            sum += square % 10; 
+            square /= 10;      
+        } 
+        if (sum == n) {
+            return "Neon Number";
+        }
+        return "Not Neon Number";
+    }
+    public static void main(String[] args) { 
+        System.out.println(checkNeonNumber(9)); 
+        System.out.println(checkNeonNumber(1));
+    }
+}
